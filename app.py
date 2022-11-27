@@ -4,9 +4,9 @@ import numpy as np
 
 
 st.write("""
-# Division of Two Numbers
+# Division of two numbers
 
-This app takes two numbers as input, and divide the First number with Second number and shows result as output
+This app takes two number's as input, and divide the First number with Second number and shows result as output
 
 """)
 
@@ -28,7 +28,10 @@ def user_input_features():
 df = user_input_features()
 
 st.subheader("User Input Parameters")
-st.write(df.to_dict())
+#st.write(df.to_dict())
+input_dict = {'First_Number':df['First_Number'],
+              'Second_Number': df['Second_Number']}
+st.write(input_dict)
 
 st.subheader("Result of Division of two numbers is:")
 
