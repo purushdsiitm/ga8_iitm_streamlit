@@ -29,9 +29,6 @@ df = user_input_features()
 
 st.subheader("User Input Parameters")
 st.write(df.to_dict())
-#input_dict = {'First_Number':df['First_Number'],
-              'Second_Number': df['Second_Number']}
-#st.write(input_dict)
 
 st.subheader("Result of Division of two numbers is:")
 
