@@ -15,8 +15,8 @@ This app takes two number's as input, and divide the First number with Second nu
 st.header('Input Parameters')
 
 def user_input_features():
-  first_number = st.number_input("Enter First Number",min_value=0.00)
-  second_number = st.number_input("Enter Second Number",min_value=1.00)
+  first_number = st.number_input("Enter First Number")
+  second_number = st.number_input("Enter Second Number")
 
   data = {'First_Number':first_number,
           'Second_Number':second_number
