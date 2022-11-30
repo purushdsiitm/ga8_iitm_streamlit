@@ -14,23 +14,16 @@ This app takes two number's as input, and divide the First number with Second nu
 
 st.header('Input Parameters')
 
-def user_input_features():
-  first_number = st.number_input("Enter First Number")
-  second_number = st.number_input("Enter Second Number")
-
-  data = {'First_Number':first_number,
-          'Second_Number':second_number
-         }
-  
-  features = pd.DataFrame(data,index=[0])
-  return features
-
-df = user_input_features()
+first_number = st.number_input("Enter First Number")
+second_number = st.number_input("Enter Second Number")
 
 st.subheader("User Input Parameters")
-st.write(df.to_dict())
+st.write({ 'first_number': first_number,
+           'second_number': second_number })
 
 st.subheader("Result of Division of two numbers is:")
-
-result = (df['First_Number']/df['Second_Number'])
-st.write(result)
+if second_number == 0.0:
+  st.write("Second number can not be zero. Please enter valid number")
+else:
+  result = (first_number/second_number)
+  st.write(result)
