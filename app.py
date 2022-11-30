@@ -22,8 +22,6 @@ st.write({ 'first_number': first_number,
            'second_number': second_number })
 
 st.subheader("Result of Division of two numbers is:")
-if second_number == 0.0:
-  st.write("Second number can not be zero. Please enter valid number")
-else:
+if second_number != 0.0:
   result = (first_number/second_number)
   st.write(result)
